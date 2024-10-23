@@ -16,8 +16,7 @@ This project evaluates neural networks for potential backdoor attacks and helps 
    Use `evaluate_model.py` to load and test the model accuracy on clean data.
 
    ```bash
-   python src/evaluate_model.py --model model1 --dataset mnist
-
+   python src/evaluate_model.py
 
 ### Requirements
 Given a (third-party trained) neural network, your task is to evaluate whether there are backdoors embedded in the neural network. 

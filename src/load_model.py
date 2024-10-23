@@ -12,6 +12,11 @@ from models.model_cifar10 import CIFAR10Net
 def load_model(model_name, dataset):
     """Loads the pre-trained model from the provided name and dataset"""
     
+    # Detect if CUDA is available
+    #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cpu')  # Forcing CPU-only mode
+    #print(f"Using device: {device}")
+    
     if dataset == 'mnist':
         model = MNISTNet()
     elif dataset == 'cifar10':
@@ -20,7 +25,7 @@ def load_model(model_name, dataset):
         raise ValueError("Unsupported dataset")
     
     # Explicitly pointing to 'mnist_bd.pt' for MNIST dataset otherwise find the others based on CIFAR10 or 100
-    model_path = f'models/{model_name}/mnist_bd.pt' if dataset == 'mnist' else f'../models/{model_name}/{dataset}_bd.pt'
+    model_path = f'models/{model_name}/mnist_bd.pt' if dataset == 'mnist' else f'models/{model_name}/{dataset}_bd.pt'
     
     # Ensure the path exists
     if not os.path.exists(model_path):
@@ -28,4 +33,4 @@ def load_model(model_name, dataset):
     
     model.load_state_dict(torch.load(model_path))
     
-    return model
+    return model.to(device), device

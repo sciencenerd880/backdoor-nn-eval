@@ -4,7 +4,7 @@
 This project evaluates neural networks for potential backdoor attacks and helps to identify backdoor triggers. It also allows for creating backdoored models on MNIST and CIFAR-10 datasets.
 
 ### Project Structure
-- `models/`: Contains the weights and architectures of the models.
+- `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `data/`: Stores the MNIST and CIFAR-10 datasets.
 - `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
 

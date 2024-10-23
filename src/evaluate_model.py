@@ -21,7 +21,7 @@ def evaluate_model(model, dataset):
             correct += (predicted == target).sum().item()
     
     accuracy = correct / total
-    print(f'Accuracy on clean test data: {accuracy * 100:.2f}%')
+    #print(f'Accuracy on clean test data: {accuracy * 100:.2f}%')
     
     return accuracy
 

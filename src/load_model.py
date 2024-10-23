@@ -31,6 +31,7 @@ def load_model(model_name, dataset):
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"The model file '{model_path}' does not exist.")
     
-    model.load_state_dict(torch.load(model_path))
+    #model.load_state_dict(torch.load(model_path))
+    model.load_state_dict(torch.load(model_path, weights_only=True))
     
     return model.to(device), device

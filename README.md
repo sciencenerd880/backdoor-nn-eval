@@ -17,3 +17,14 @@ This project evaluates neural networks for potential backdoor attacks and helps 
 
    ```bash
    python src/evaluate_model.py --model model1 --dataset mnist
+
+
+### Requirements
+Given a (third-party trained) neural network, your task is to evaluate whether there are backdoors embedded in the neural network. 
+We will provide multiple backdoored (or not) neural networks trained on the MNIST, CIFAR-10, and CIFAR-100 datasets. 
+You as a team will provide us one backdoored neural network trained on the same datasets.
+You will be evaluated in terms of (1) whether an alarm is triggered if there is a backdoor; and (2) whether the backdoor trigger is successfully identified.  
+
+- Each folder contains a backdoor model trained with different backdoor attacks, triggers, and targets.
+- Model 1 is trained on MNIST dataset. The rest are trained on CIFAR10 dataset.
+- The architectures of the models can be found in the according python files (model_mnist.py for the MNIST model and model_cifar10.py for the CIFAR10 models).

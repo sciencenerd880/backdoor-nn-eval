@@ -78,6 +78,7 @@ if __name__ == "__main__":
     dataset = load_dataset(dataset_name, train=False)
     
     result = evaluate_model(model, dataset, classification_labels)
+    print()
     print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
     print("Classification Report:\n" + result['classification_report'])
     # sns.heatmap(result["confusion_matrix"], annot=True, yticklabels=classification_labels, xticklabels=classification_labels)

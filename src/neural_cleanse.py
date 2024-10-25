@@ -25,24 +25,24 @@ def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=
     criterion = nn.CrossEntropyLoss()
 
     for step in range(num_steps):
+        running_loss = 0.0
         for images, labels in testloader:
             optimizer.zero_grad()
             images, labels = images.to(device), labels.to(device)
             target_labels = torch.full_like(labels, target_class).to(device)
 
-            # Apply trigger to images
             triggered_images = trigger_mask(images)
 
-            # Forward pass through model
             outputs = model(triggered_images)
             loss = criterion(outputs, target_labels)
 
             # Backpropagation and optimization
             loss.backward()
+            running_loss += loss.item()
             optimizer.step()
 
         if step % 100 == 0:
-            print(f"Step [{step}/{num_steps}], Loss: {loss.item():.4f}")
+            print(f"Step [{step}/{num_steps}], Loss: {running_loss / len(testloader):.4f}")
 
     # Return the optimized trigger
     return trigger_mask.mask.detach().cpu(), trigger_mask.delta.detach().cpu()
@@ -64,32 +64,29 @@ def visualize_trigger(mask, delta, title="Trigger"):
     plt.savefig(f"output/{title}.png")
 
 
-# Main function for Neural Cleanse
 def neural_cleanse(model_name, dataset_name):
-    # Load model and dataset
     testloader = load_test_loader(dataset_name)
     model, device = load_model(model_name, dataset_name)
-    model.to(device)
 
-    num_classes = 10
+    if dataset_name == "cifar10":
+        classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    else:
+        classification_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     perturbations = []
-    for target_class in range(num_classes):
-        print(f"Generating trigger for target class {target_class}...")
+    for target_class in range(len(classification_labels)):
+        print(f"Generating trigger for target class {classification_labels[target_class]}...")
         mask, delta = generate_trigger(model, testloader, target_class, device)
         perturbations.append((mask, delta))
 
-        # Visualize the generated trigger
-        visualize_trigger(mask, delta, title=f"Target Class {target_class}")
+        visualize_trigger(mask, delta, title=f"{model_name}: Target Class {classification_labels[target_class]}")
 
-    # Optional: You can now compute the perturbation norms and detect anomalies in the trigger size.
     perturbation_sizes = [torch.norm(mask).item() for mask, _ in perturbations]
     print(f"Perturbation sizes: {perturbation_sizes}")
-    print("If one class has a significantly smaller perturbation, it might be the backdoored class.")
+    # if one class has a significantly smaller perturbation, it might be the backdoored class.
 
 
 if __name__ == "__main__":
-    # Example usage for an MNIST model
-    model_name = 'model1'  # Replace with your model's file path
-    dataset_name = 'mnist'  # Can be 'CIFAR-10' or 'MNIST'
+    model_name = 'model1' # Replace with your model's file path
+    dataset_name = 'mnist'
     neural_cleanse(model_name, dataset_name)

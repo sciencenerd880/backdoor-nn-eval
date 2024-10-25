@@ -14,7 +14,9 @@ class TriggerMask(nn.Module):
         self.delta = nn.Parameter(torch.zeros(input_size, requires_grad=True))
 
     def forward(self, x):
-        return x * (1 - torch.sigmoid(self.mask)) + torch.sigmoid(self.mask) * torch.tanh(self.delta)
+        sigmoid_mask = torch.sigmoid(self.mask)
+        tanh_delta = torch.tanh(self.delta)
+        return x * (1 - sigmoid_mask) + sigmoid_mask * tanh_delta
 
 
 # Apply the trigger mask to all inputs and optimize the trigger for a specific target class
@@ -50,18 +52,51 @@ def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=
 
 # Visualize the trigger
 def visualize_trigger(mask, delta, title="Trigger"):
-    mask = torch.sigmoid(mask).numpy()
-    delta = torch.tanh(delta).numpy()
+    sigmoid_mask = torch.sigmoid(mask).numpy()
+    tanh_delta = torch.tanh(delta).numpy()
 
     plt.figure()
-    plt.subplot(1, 2, 1)
-    plt.imshow(mask[0], cmap='gray')
+    plt.subplot(1, 3, 1)
+    plt.imshow(sigmoid_mask.transpose(1, 2, 0))
     plt.title("Mask")
-    plt.subplot(1, 2, 2)
-    plt.imshow(delta[0], cmap='gray')
+    plt.subplot(1, 3, 2)
+    plt.imshow(tanh_delta.transpose(1, 2, 0))
     plt.title("Delta (Trigger)")
+    plt.subplot(1, 3, 3)
+    plt.title("Mask * Delta")
+    plt.imshow((sigmoid_mask * tanh_delta).transpose(1, 2, 0))
     plt.suptitle(title)
     plt.savefig(f"output/{title}.png")
+
+
+def calculate_asr(model, testloader, mask, delta, target_class, device):
+    correct = 0
+    total = 0
+    sigmoid_mask = torch.sigmoid(mask.to(device))
+    tanh_delta = torch.tanh(delta.to(device))
+
+    with torch.no_grad():
+        for images, labels in testloader:
+            images, labels = images.to(device), labels.to(device)
+
+            # only apply the trigger to images that do not belong to the target class
+            # images = images[labels != target_class]
+            # labels = labels[labels != target_class]
+
+            # if len(images) == 0:
+            #     continue
+
+            triggered_images = images * (1 - sigmoid_mask) + sigmoid_mask * tanh_delta
+
+            outputs = model(triggered_images)
+            _, predicted = torch.max(outputs, 1)
+            correct += (predicted == target_class).sum().item()
+            total += labels.size(0)
+
+    # Calculate the attack success rate
+    attack_success_rate = 100 * correct / total if total > 0 else 0
+    
+    return attack_success_rate
 
 
 def neural_cleanse(model_name, dataset_name):
@@ -80,6 +115,9 @@ def neural_cleanse(model_name, dataset_name):
         perturbations.append((mask, delta))
 
         visualize_trigger(mask, delta, title=f"{model_name}: Target Class {classification_labels[target_class]}")
+        # calculate ASR for this trigger
+        attack_success_rate = calculate_asr(model, testloader, mask, delta, target_class=target_class, device=device)
+        print(f"Attack Success Rate for target class {target_class}: {attack_success_rate:.2f}%")
 
     perturbation_sizes = [torch.norm(mask).item() for mask, _ in perturbations]
     print(f"Perturbation sizes: {perturbation_sizes}")
@@ -87,6 +125,6 @@ def neural_cleanse(model_name, dataset_name):
 
 
 if __name__ == "__main__":
-    model_name = 'model1' # Replace with your model's file path
-    dataset_name = 'mnist'
+    model_name = 'model3' # Replace with your model's file path
+    dataset_name = 'cifar10'
     neural_cleanse(model_name, dataset_name)

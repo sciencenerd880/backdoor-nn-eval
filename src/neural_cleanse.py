@@ -20,7 +20,7 @@ class TriggerMask(nn.Module):
 
 
 # Apply the trigger mask to all inputs and optimize the trigger for a specific target class
-def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=250):
+def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=250, l1_threshold=5.0):
     input_size = next(iter(testloader))[0].shape[1:]  # Get input size
     trigger_mask = TriggerMask(input_size).to(device)
     optimizer = optim.Adam(trigger_mask.parameters(), lr=lr)
@@ -37,6 +37,9 @@ def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=
 
             outputs = model(triggered_images)
             loss = criterion(outputs, target_labels)
+
+            l1_penalty = torch.norm(torch.sigmoid(trigger_mask.mask) * torch.tanh(trigger_mask.delta), p=1)
+            loss += 0.01 * torch.clamp(l1_penalty - l1_threshold, min=0)
 
             # Backpropagation and optimization
             loss.backward()
@@ -111,7 +114,15 @@ def neural_cleanse(model_name, dataset_name):
     perturbations = []
     for target_class in range(len(classification_labels)):
         print(f"Generating trigger for target class {classification_labels[target_class]}...")
-        mask, delta = generate_trigger(model, testloader, target_class, device)
+        mask, delta = generate_trigger(
+            model,
+            testloader,
+            target_class,
+            device,
+            lr=0.1,
+            num_steps=250,
+            l1_threshold=5,
+        )
         perturbations.append((mask, delta))
 
         visualize_trigger(mask, delta, title=f"{model_name}: Target Class {classification_labels[target_class]}")
@@ -125,6 +136,7 @@ def neural_cleanse(model_name, dataset_name):
 
 
 if __name__ == "__main__":
-    model_name = 'model3' # Replace with your model's file path
-    dataset_name = 'cifar10'
+    model_name = 'model1' # Replace with your model's file path
+    dataset_name = 'mnist'
+    # dataset_name = 'cifar10'
     neural_cleanse(model_name, dataset_name)

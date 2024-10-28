@@ -1,0 +1,58 @@
+Test results will be saved to: output\trigger_test_results_20241029_053610
+Files already downloaded and verified
+
+Loaded trigger components:
+Mask shape: torch.Size([1, 32, 32]), range: [-6.9827, 4.3471]
+Delta shape: torch.Size([3, 32, 32]), range: [-3.0801, 2.4376]
+
+Testing trigger for target class 9 (truck)
+Trigger L1 norm: 17.2503
+
+Source Class 0 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 1 Results:
+  Total samples: 1000
+  Successfully triggered: 997
+  Attack Success Rate: 99.70%
+
+Source Class 2 Results:
+  Total samples: 1000
+  Successfully triggered: 997
+  Attack Success Rate: 99.70%
+
+Source Class 3 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 4 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 5 Results:
+  Total samples: 1000
+  Successfully triggered: 999
+  Attack Success Rate: 99.90%
+
+Source Class 6 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 7 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 8 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Average Attack Success Rate: 99.92%
+
+Test completed. Results saved to: output\trigger_test_results_20241029_053610

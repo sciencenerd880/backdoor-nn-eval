@@ -1,0 +1,57 @@
+{
+    "model_name": "model4",
+    "dataset_name": "cifar10",
+    "target_class": 2,
+    "target_class_name": "bird",
+    "trigger_file": "output/neural_cleanse_experiment_20241029_044058/triggers/all/trigger_mask_model4_class_bird.pt",
+    "timestamp": "2024-10-29 05:05:17",
+    "average_asr": 99.9,
+    "l1_mask_norm": 13.459577560424805,
+    "results_by_source": {
+        "0": {
+            "success": 998,
+            "total": 1000,
+            "asr": 99.8
+        },
+        "1": {
+            "success": 998,
+            "total": 1000,
+            "asr": 99.8
+        },
+        "3": {
+            "success": 1000,
+            "total": 1000,
+            "asr": 100.0
+        },
+        "4": {
+            "success": 1000,
+            "total": 1000,
+            "asr": 100.0
+        },
+        "5": {
+            "success": 1000,
+            "total": 1000,
+            "asr": 100.0
+        },
+        "6": {
+            "success": 999,
+            "total": 1000,
+            "asr": 99.9
+        },
+        "7": {
+            "success": 999,
+            "total": 1000,
+            "asr": 99.9
+        },
+        "8": {
+            "success": 1000,
+            "total": 1000,
+            "asr": 100.0
+        },
+        "9": {
+            "success": 997,
+            "total": 1000,
+            "asr": 99.7
+        }
+    }
+}

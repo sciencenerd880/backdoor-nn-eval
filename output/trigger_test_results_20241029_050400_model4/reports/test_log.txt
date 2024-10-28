@@ -1,0 +1,58 @@
+Test results will be saved to: output\trigger_test_results_20241029_050400
+Files already downloaded and verified
+
+Loaded trigger components:
+Mask shape: torch.Size([1, 32, 32]), range: [-7.2899, 4.3870]
+Delta shape: torch.Size([3, 32, 32]), range: [-3.0601, 3.0729]
+
+Testing trigger for target class 2 (bird)
+Trigger L1 norm: 13.4596
+
+Source Class 0 Results:
+  Total samples: 1000
+  Successfully triggered: 998
+  Attack Success Rate: 99.80%
+
+Source Class 1 Results:
+  Total samples: 1000
+  Successfully triggered: 998
+  Attack Success Rate: 99.80%
+
+Source Class 3 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 4 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 5 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 6 Results:
+  Total samples: 1000
+  Successfully triggered: 999
+  Attack Success Rate: 99.90%
+
+Source Class 7 Results:
+  Total samples: 1000
+  Successfully triggered: 999
+  Attack Success Rate: 99.90%
+
+Source Class 8 Results:
+  Total samples: 1000
+  Successfully triggered: 1000
+  Attack Success Rate: 100.00%
+
+Source Class 9 Results:
+  Total samples: 1000
+  Successfully triggered: 997
+  Attack Success Rate: 99.70%
+
+Average Attack Success Rate: 99.90%
+
+Test completed. Results saved to: output\trigger_test_results_20241029_050400

@@ -1,0 +1,80 @@
+{
+    "model_name": "model4",
+    "analysis_timestamp": "2024-10-29 04:59:45.673782",
+    "class_analysis": [
+        {
+            "class": "airplane",
+            "l1_mask_norm": 33.57648468017578,
+            "attack_success_rate": 99.66666666666667,
+            "anomaly_index": 1.1715727715162136
+        },
+        {
+            "class": "automobile",
+            "l1_mask_norm": 22.865436553955078,
+            "attack_success_rate": 99.78888888888889,
+            "anomaly_index": 0.7106495584341878
+        },
+        {
+            "class": "bird",
+            "l1_mask_norm": 13.459577560424805,
+            "attack_success_rate": 99.9,
+            "anomaly_index": 2.3635146768952096
+        },
+        {
+            "class": "cat",
+            "l1_mask_norm": 28.45197296142578,
+            "attack_success_rate": 99.65555555555555,
+            "anomaly_index": 0.27105675539342194
+        },
+        {
+            "class": "deer",
+            "l1_mask_norm": 29.559965133666992,
+            "attack_success_rate": 99.63333333333334,
+            "anomaly_index": 0.46576110023689005
+        },
+        {
+            "class": "dog",
+            "l1_mask_norm": 14.46522331237793,
+            "attack_success_rate": 100.0,
+            "anomaly_index": 2.1867953803296167
+        },
+        {
+            "class": "frog",
+            "l1_mask_norm": 25.367000579833984,
+            "attack_success_rate": 99.7,
+            "anomaly_index": 0.27105675539342194
+        },
+        {
+            "class": "horse",
+            "l1_mask_norm": 29.20725440979004,
+            "attack_success_rate": 99.88888888888889,
+            "anomaly_index": 0.403780237797388
+        },
+        {
+            "class": "ship",
+            "l1_mask_norm": 32.5804328918457,
+            "attack_success_rate": 99.4,
+            "anomaly_index": 0.9965393951660126
+        },
+        {
+            "class": "truck",
+            "l1_mask_norm": 23.27696990966797,
+            "attack_success_rate": 99.97777777777777,
+            "anomaly_index": 0.6383319605190028
+        }
+    ],
+    "suspicious_classes": [
+        {
+            "class": "bird",
+            "l1_mask_norm": 13.459577560424805,
+            "anomaly_index": 2.3635146768952096,
+            "asr": 99.9
+        },
+        {
+            "class": "dog",
+            "l1_mask_norm": 14.46522331237793,
+            "anomaly_index": 2.1867953803296167,
+            "asr": 100.0
+        }
+    ]
+}

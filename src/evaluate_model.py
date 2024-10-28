@@ -21,7 +21,10 @@ def evaluate_model(model, dataset, classification_labels, device):
     
     with torch.no_grad():
         for data, target in test_loader:
-            data, target = data.to(device), target.to(device)
+            # Move data and target to the specified device
+            data = data.to(device)
+            target = target.to(device)
+            
             output = model(data)
             _, predicted = torch.max(output, 1)
             total += target.size(0)
@@ -68,12 +71,12 @@ def print_cm(cm, labels, hide_zeroes=False, hide_diagonal=False, hide_threshold=
 if __name__ == "__main__":
     # Note so far, model evaluation for model1 mnist works, but cifar10 has some cuda issues... 
     
-    model_name = 'model1'  # As per the models' subfolder, Change to your desired model name (e.g., 'model1', 'model2')
-    dataset_name = 'mnist'  # Change to the desired dataset ('mnist' or 'cifar10')
+    model_name = 'model2'  # As per the models' subfolder, Change to your desired model name (e.g., 'model1', 'model2')
+    dataset_name = 'cifar10'  # Change to the desired dataset ('mnist' or 'cifar10')
     if dataset_name == "cifar10":
         classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
     else:
-        classification_labels = [str(i) for i in range(10)]
+        classification_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     model, device = load_model(model_name, dataset_name)
     dataset = load_dataset(dataset_name, train=False)

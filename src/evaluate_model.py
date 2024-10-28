@@ -8,7 +8,7 @@ from load_dataset import load_dataset
 
 
 # Adapted from the lab exercise
-def evaluate_model(model, dataset, classification_labels):
+def evaluate_model(model, dataset, classification_labels, device):
     """Evaluates model accuracy on clean test data"""
     
     test_loader = DataLoader(dataset, batch_size=64, shuffle=False)
@@ -21,6 +21,7 @@ def evaluate_model(model, dataset, classification_labels):
     
     with torch.no_grad():
         for data, target in test_loader:
+            data, target = data.to(device), target.to(device)
             output = model(data)
             _, predicted = torch.max(output, 1)
             total += target.size(0)
@@ -77,7 +78,7 @@ if __name__ == "__main__":
     model, device = load_model(model_name, dataset_name)
     dataset = load_dataset(dataset_name, train=False)
     
-    result = evaluate_model(model, dataset, classification_labels)
+    result = evaluate_model(model, dataset, classification_labels, device)
     print()
     print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
     print("Classification Report:\n" + result['classification_report'])

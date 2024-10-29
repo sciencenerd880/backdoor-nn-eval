@@ -17,9 +17,15 @@ def load_dataset(dataset_name, train=True, transform=None):
     return dataset
 
 
-def load_test_loader(dataset_name):
+def load_test_loader(dataset_name, num_workers=4, pin_memory=True):
     transform = transforms.Compose([transforms.ToTensor()])
     testset = load_dataset(dataset_name, train=False, transform=transform)
 
-    testloader = DataLoader(testset, batch_size=100, shuffle=False)
-    return testloader
+    #testloader = DataLoader(testset, batch_size=100, shuffle=False)
+    return DataLoader(
+        testset,
+        batch_size=128,  # Increase batch size for faster processing
+        shuffle=False,
+        num_workers=num_workers,  # Use multiple workers for data loading
+        pin_memory=pin_memory    # Enable pin memory for faster GPU transfer
+    )

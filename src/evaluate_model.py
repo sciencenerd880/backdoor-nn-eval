@@ -87,34 +87,3 @@ if __name__ == "__main__":
     print("Confusion Matrix:")
     print_cm(result["confusion_matrix"], labels=classification_labels)
     
-'''
-if __name__ == "__main__":
-    # Choose model and dataset
-    #model_name = 'model1'  # As per the models' subfolder, Change to your desired model name (e.g., 'model1', 'model2')
-    #dataset_name = 'mnist'  # Change to the desired dataset ('mnist' or 'cifar10')
-    
-    model_dataset_mapping = {
-        'model1': 'mnist',   # Model 1 is trained on MNIST
-        'model2': 'cifar10',  # The rest are trained on CIFAR-10
-        'model3': 'cifar10',
-        'model4': 'cifar10',
-        'model5': 'cifar10'
-    }
-        
-    for model_name, dataset_name in model_dataset_mapping.items():
-        if dataset_name == "cifar10":
-            classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
-        else:
-            classification_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-        print(f"Evaluating {model_name} using {dataset_name} dataset..")
-        
-        model, device = load_model(model_name, dataset_name)
-        dataset = load_dataset(dataset_name, train=False)
-        
-        result = evaluate_model(model, dataset, classification_labels)
-        print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
-        print("Classification Report:\n" + result['classification_report'])
-        print("Confusion Matrix:")
-        print_cm(result["confusion_matrix"], labels=classification_labels)
-'''

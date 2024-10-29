@@ -5,3 +5,4 @@ __pycache__/
 *.pyd
 output/*
 !output/.gitkeep
+data/*

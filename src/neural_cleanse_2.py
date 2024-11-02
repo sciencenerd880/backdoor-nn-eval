@@ -131,7 +131,7 @@ def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=
                 best_trigger = (trigger_mask.mask.detach().cpu(), trigger_mask.delta.detach().cpu())
             
             # Early stopping only if we have a good trigger and have run at least 20 steps
-            if current_asr > asr_threshold and step >= 10:
+            if current_asr > asr_threshold and step >= 30:
                 if current_l1_norm >= best_l1_norm:  # If L1 starts increasing, stop
                     print(f"\nStopping: L1 norm not improving. Best trigger has:")
                     print(f"  L1 Mask Norm: {best_l1_norm:.4f}")
@@ -561,9 +561,14 @@ def calculate_l1_pixel_norm(trigger_pattern):
 if __name__ == "__main__":
     # Enable GPU optimization
     torch.backends.cudnn.benchmark = True
-    
-    model_name = 'model5'
-    # dataset_name = 'mnist'
-    dataset_name = 'cifar10'
-    neural_cleanse(model_name, dataset_name)
 
+    models = [
+        ("model1", "mnist"),
+        ("model2", "cifar10"),
+        ("model3", "cifar10"),
+        ("model4", "cifar10"),
+        ("model5", "cifar10"),
+    ]
+    
+    for model_name, dataset_name in models:
+        neural_cleanse(model_name, dataset_name)

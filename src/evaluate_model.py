@@ -8,10 +8,8 @@ from load_dataset import load_dataset
 
 
 # Adapted from the lab exercise
-def evaluate_model(model, dataset, classification_labels, device):
+def evaluate_model(model, test_loader, classification_labels, device):
     """Evaluates model accuracy on clean test data"""
-    
-    test_loader = DataLoader(dataset, batch_size=64, shuffle=False)
     
     model.eval()
     correct = 0
@@ -78,7 +76,8 @@ if __name__ == "__main__":
     model, device = load_model(model_name, dataset_name)
     dataset = load_dataset(dataset_name, train=False)
     
-    result = evaluate_model(model, dataset, classification_labels, device)
+    test_loader = DataLoader(dataset, batch_size=64, shuffle=False)
+    result = evaluate_model(model, test_loader, classification_labels, device)
     print()
     print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
     print("Classification Report:\n" + result['classification_report'])

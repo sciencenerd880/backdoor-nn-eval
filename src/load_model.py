@@ -13,8 +13,8 @@ def load_model(model_name, dataset):
     """Loads the pre-trained model from the provided name and dataset"""
     
     # Detect if CUDA is available
-    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    device = torch.device('mps')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    # device = torch.device('mps')
     # device = torch.device('cpu')  # Forcing CPU-only mode
     # print(f"Using device: {device}")
     

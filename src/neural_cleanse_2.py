@@ -43,7 +43,7 @@ class TriggerMask(nn.Module):
 
 # Create the trigger pattern for the target class by optimizing Mask and Delta in order to maximize the misclassification
 # Computes the training loss (model output vs target class) using L1 norm
-def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=250, lambda_l1=0.01, asr_threshold=95):
+def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=250, lambda_l1=0.01, asr_threshold=95, cutoff_step=10):
     input_size = next(iter(testloader))[0].shape[1:]
     trigger_mask = TriggerMask(input_size).to(device)
     
@@ -131,7 +131,7 @@ def generate_trigger(model, testloader, target_class, device, lr=0.1, num_steps=
                 best_trigger = (trigger_mask.mask.detach().cpu(), trigger_mask.delta.detach().cpu())
             
             # Early stopping only if we have a good trigger and have run at least 20 steps
-            if current_asr > asr_threshold and step >= 30:
+            if current_asr > asr_threshold and step >= cutoff_step:
                 if current_l1_norm >= best_l1_norm:  # If L1 starts increasing, stop
                     print(f"\nStopping: L1 norm not improving. Best trigger has:")
                     print(f"  L1 Mask Norm: {best_l1_norm:.4f}")
@@ -563,6 +563,8 @@ if __name__ == "__main__":
     torch.backends.cudnn.benchmark = True
 
     models = [
+        ("reference_mnist", "mnist"),
+        ("reference_cifar10", "cifar10"),
         ("model1", "mnist"),
         ("model2", "cifar10"),
         ("model3", "cifar10"),

@@ -61,12 +61,12 @@ def train_reference_model(dataset_name):
         print()
 
     # save model
-    model_save_path = f"models/reference_{dataset_name}/{dataset_name}_reference.pt"
-    torch.save(model.state_dict, model_save_path)
+    model_save_path = f"models/reference_{dataset_name}/{dataset_name}_bd.pt"
+    torch.save(model.state_dict(), model_save_path)
     print(f"Model saved in {model_save_path}")
 
 
 if __name__ == "__main__":
-    # dataset_name = "mnist"
-    dataset_name = "cifar10"
-    train_reference_model(dataset_name)
+    dataset_names = ["mnist",] # "cifar10"]
+    for dataset_name in dataset_names:
+        train_reference_model(dataset_name)

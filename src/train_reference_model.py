@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -13,13 +14,14 @@ from models.model_cifar10 import CIFAR10Net
 
 
 def train_reference_model(dataset_name):
+    current_time = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
     if dataset_name == "cifar10":
         classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
     else:
         classification_labels = [str(i) for i in range(10)]
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    # device = torch.device('mps')
+    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('mps')
 
     train_batch_size = 64
     test_batch_size = 128
@@ -61,12 +63,15 @@ def train_reference_model(dataset_name):
         print()
 
     # save model
-    model_save_path = f"models/reference_{dataset_name}/{dataset_name}_bd.pt"
+    if not os.path.exists(f"models/reference_{dataset_name}_{current_time}/"):
+        os.mkdir(f"models/reference_{dataset_name}_{current_time}/")
+
+    model_save_path = f"models/reference_{dataset_name}_{current_time}/{dataset_name}_bd.pt"
     torch.save(model.state_dict(), model_save_path)
     print(f"Model saved in {model_save_path}")
 
 
 if __name__ == "__main__":
-    dataset_names = ["mnist",] # "cifar10"]
+    dataset_names = ["mnist", "mnist", "mnist", "mnist", "cifar10", "cifar10", "cifar10", "cifar10"]
     for dataset_name in dataset_names:
         train_reference_model(dataset_name)

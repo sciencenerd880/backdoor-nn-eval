@@ -19,6 +19,7 @@ import os
 import numpy as np
 import sys
 
+MIN_ANOMALY_INDEX = 2 # Gan plz put magic number
 
 # Define perturbation mask and delta pattern which are trainable parameters
 class TriggerMask(nn.Module):
@@ -487,7 +488,7 @@ def neural_cleanse(model_name, dataset_name):
         (classification_labels[i], results['l1_pixel_norms'][i], 
          anomaly_indices[i], results['attack_success_rates'][i])
         for i in range(len(classification_labels))
-        if (anomaly_indices[i] > 2 and 
+        if (anomaly_indices[i] > MIN_ANOMALY_INDEX and 
             results['l1_pixel_norms'][i] < median_norm and 
             results['attack_success_rates'][i] > 75)
     ]

@@ -65,24 +65,31 @@ def print_cm(cm, labels, hide_zeroes=False, hide_diagonal=False, hide_threshold=
 
 if __name__ == "__main__":
     # Note so far, model evaluation for model1 mnist works, but cifar10 has some cuda issues... 
-    
-    model_name = 'model1'  # As per the models' subfolder, Change to your desired model name (e.g., 'model1', 'model2')
-    dataset_name = 'mnist'  # Change to the desired dataset ('mnist' or 'cifar10')
-    if dataset_name == "cifar10":
-        classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
-    else:
-        classification_labels = [str(i) for i in range(10)]
 
-    model, device = load_model(model_name, dataset_name)
-    dataset = load_dataset(dataset_name, train=False)
+    models = [
+        ("reference_mnist", "mnist"),
+        ("reference_cifar10", "cifar10"),
+        ("model1", "mnist"),
+        ("model2", "cifar10"),
+        ("model3", "cifar10"),
+        ("model4", "cifar10"),
+        ("model5", "cifar10"),
+    ]
     
-    test_loader = DataLoader(dataset, batch_size=64, shuffle=False)
-    result = evaluate_model(model, test_loader, classification_labels, device)
-    print()
-    print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
-    print("Classification Report:\n" + result['classification_report'])
-    # sns.heatmap(result["confusion_matrix"], annot=True, yticklabels=classification_labels, xticklabels=classification_labels)
-    # plt.show()
-    print("Confusion Matrix:")
-    print_cm(result["confusion_matrix"], labels=classification_labels)
-    
+    for model_name, dataset_name in models:
+        if dataset_name == "cifar10":
+            classification_labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+        else:
+            classification_labels = [str(i) for i in range(10)]
+        model, device = load_model(model_name, dataset_name)
+        dataset = load_dataset(dataset_name, train=False)
+        
+        test_loader = DataLoader(dataset, batch_size=64, shuffle=False)
+        result = evaluate_model(model, test_loader, classification_labels, device)
+        print()
+        print(f"Accuracy for {model_name} on {dataset_name}: {result['accuracy'] * 100:.2f}%\n")
+        print("Classification Report:\n" + result['classification_report'])
+        # sns.heatmap(result["confusion_matrix"], annot=True, yticklabels=classification_labels, xticklabels=classification_labels)
+        # plt.show()
+        print("Confusion Matrix:")
+        print_cm(result["confusion_matrix"], labels=classification_labels)

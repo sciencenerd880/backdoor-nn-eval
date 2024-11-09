@@ -563,13 +563,16 @@ if __name__ == "__main__":
     torch.backends.cudnn.benchmark = True
 
     models = [
-        ("reference_mnist", "mnist"),
-        ("reference_cifar10", "cifar10"),
-        ("model1", "mnist"),
+        # ("reference_mnist", "mnist"),
+        # ("reference_cifar10", "cifar10"),
+        # ("model1", "mnist"),
         ("model2", "cifar10"),
-        ("model3", "cifar10"),
-        ("model4", "cifar10"),
-        ("model5", "cifar10"),
+        # ("model2", "cifar10"),
+        # ("model2", "cifar10"),
+        # ("model2", "cifar10"),
+        # ("model3", "cifar10"),
+        # ("model4", "cifar10"),
+        # ("model5", "cifar10"),
     ]
     
     for model_name, dataset_name in models:

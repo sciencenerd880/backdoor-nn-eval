@@ -1,0 +1,32 @@
+Accuracy for reference_cifar10_4 on cifar10: 74.32%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+    airplane       0.78      0.77      0.77      1000
+  automobile       0.84      0.91      0.87      1000
+        bird       0.63      0.64      0.64      1000
+         cat       0.55      0.55      0.55      1000
+        deer       0.70      0.70      0.70      1000
+         dog       0.63      0.69      0.66      1000
+        frog       0.85      0.72      0.78      1000
+       horse       0.78      0.78      0.78      1000
+        ship       0.81      0.88      0.84      1000
+       truck       0.88      0.79      0.84      1000
+
+    accuracy                           0.74     10000
+   macro avg       0.75      0.74      0.74     10000
+weighted avg       0.75      0.74      0.74     10000
+
+Confusion Matrix:
+                 airplane automobile       bird        cat       deer        dog       frog      horse       ship      truck 
+      airplane        765         16         53         17         13          7          6         15         82         26 
+    automobile         12        905          5          4          3          3          1          3         35         29 
+          bird         61          8        642         67         74         72         30         30         14          2 
+           cat         26          7         80        547         63        174         32         41         21          9 
+          deer         12          2         77         59        703         38         30         62         12          5 
+           dog         14          2         43        136         44        692         16         43          5          5 
+          frog         10          7         56         92         54         38        723          5         11          4 
+         horse         14          7         40         45         37         53          3        781          8         12 
+          ship         33         20         11         18          5          8          2          8        882         13 
+         truck         38        105          6         13          6          6          3          9         22        792

@@ -20,8 +20,9 @@ def train_reference_model(dataset_name):
     else:
         classification_labels = [str(i) for i in range(10)]
 
-    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    device = torch.device('mps')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    # device = torch.device('mps')
+    print(f"Using device: {device}")
 
     train_batch_size = 64
     test_batch_size = 128

@@ -1,10 +1,8 @@
 import random
 import torch
 import matplotlib.pyplot as plt
-
 from load_model import load_model
 from load_dataset import load_dataset
-
 
 
 if __name__ == "__main__":

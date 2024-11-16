@@ -9,6 +9,7 @@ if __name__ == "__main__":
         ("reference_mnist_3", "mnist"),
         ("reference_mnist_4", "mnist"),
         ("reference_mnist_5", "mnist"),
+        ("reference_cifar10_1", "cifar10"),
         ("reference_cifar10_2", "cifar10"),
         ("reference_cifar10_3", "cifar10"),
         ("reference_cifar10_4", "cifar10"),

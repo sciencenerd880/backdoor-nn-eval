@@ -569,17 +569,18 @@ if __name__ == "__main__":
         # ("reference_mnist_3", "mnist"),
         # ("reference_mnist_4", "mnist"),
         # ("reference_mnist_5", "mnist"),
-        ("reference_cifar10_2", "cifar10"),
-        ("reference_cifar10_3", "cifar10"),
-        ("reference_cifar10_4", "cifar10"),
-        ("reference_cifar10_5", "cifar10"),
-        # ("model1", "mnist"),
-        # ("model2", "cifar10"),
-        # ("model3", "cifar10"),
-        # ("model4", "cifar10"),
-        # ("model5", "cifar10"),
+        # ("reference_cifar10_1", "cifar10"),
+        # ("reference_cifar10_2", "cifar10"),
+        # ("reference_cifar10_3", "cifar10"),
+        # ("reference_cifar10_4", "cifar10"),
+        # ("reference_cifar10_5", "cifar10"),
+        ("model1", "mnist"),
+        ("model2", "cifar10"),
+        ("model3", "cifar10"),
+        ("model4", "cifar10"),
+        ("model5", "cifar10"),
     ]
     
-    CUTOFF_STEP = 10
+    CUTOFF_STEP = 30
     for model_name, dataset_name in models:
         neural_cleanse(model_name, dataset_name, cutoff_step=CUTOFF_STEP)

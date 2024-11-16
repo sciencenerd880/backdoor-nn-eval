@@ -59,14 +59,15 @@ def grad_cam_viz(model_name, dataset_name, num_viz_per_class=20):
 
 if __name__ == "__main__":
     models = [
-        # ("reference_cifar10_2", "cifar10"),
-        # ("reference_cifar10_3", "cifar10"),
-        # ("reference_cifar10_4", "cifar10"),
-        # ("reference_cifar10_5", "cifar10"),
+        ("reference_cifar10_1", "cifar10"),
+        ("reference_cifar10_2", "cifar10"),
+        ("reference_cifar10_3", "cifar10"),
+        ("reference_cifar10_4", "cifar10"),
+        ("reference_cifar10_5", "cifar10"),
         ("model2", "cifar10"),
-        # ("model3", "cifar10"),
-        # ("model4", "cifar10"),
-        # ("model5", "cifar10"),
+        ("model3", "cifar10"),
+        ("model4", "cifar10"),
+        ("model5", "cifar10"),
     ]
 
     NUM_VIZ_PER_CLASS = 20

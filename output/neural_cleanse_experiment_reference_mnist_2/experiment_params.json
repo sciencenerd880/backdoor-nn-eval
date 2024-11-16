@@ -1,0 +1,11 @@
+{
+    "model_name": "reference_mnist_2",
+    "dataset_name": "mnist",
+    "timestamp": "2024-11-16 11:33:29",
+    "parameters": {
+        "lr": 0.1,
+        "num_steps": 250,
+        "lambda_l1": 0.01,
+        "asr_threshold": 95
+    }
+}

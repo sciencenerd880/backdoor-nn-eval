@@ -1,0 +1,67 @@
+{
+    "model_name": "reference_cifar10_2",
+    "analysis_timestamp": "2024-11-16 04:22:20.267200",
+    "class_analysis": [
+        {
+            "class": "airplane",
+            "l1_mask_norm": 28.079866409301758,
+            "attack_success_rate": 99.67777777777778,
+            "anomaly_index": 0.23994573992534432
+        },
+        {
+            "class": "automobile",
+            "l1_mask_norm": 34.50533676147461,
+            "attack_success_rate": 99.65555555555555,
+            "anomaly_index": 0.794792206945916
+        },
+        {
+            "class": "bird",
+            "l1_mask_norm": 33.214927673339844,
+            "attack_success_rate": 99.4,
+            "anomaly_index": 0.5869887034982569
+        },
+        {
+            "class": "cat",
+            "l1_mask_norm": 35.47834777832031,
+            "attack_success_rate": 99.64444444444445,
+            "anomaly_index": 0.9514829029840005
+        },
+        {
+            "class": "deer",
+            "l1_mask_norm": 24.83808135986328,
+            "attack_success_rate": 99.55555555555556,
+            "anomaly_index": 0.7619928154549335
+        },
+        {
+            "class": "dog",
+            "l1_mask_norm": 29.700855255126953,
+            "attack_success_rate": 99.76666666666667,
+            "anomaly_index": 0.021093309093561736
+        },
+        {
+            "class": "frog",
+            "l1_mask_norm": 25.983322143554688,
+            "attack_success_rate": 99.77777777777777,
+            "anomaly_index": 0.5775667684513319
+        },
+        {
+            "class": "horse",
+            "l1_mask_norm": 29.438886642456055,
+            "attack_success_rate": 99.91111111111111,
+            "anomaly_index": 0.021093309093561736
+        },
+        {
+            "class": "ship",
+            "l1_mask_norm": 36.97225570678711,
+            "attack_success_rate": 99.76666666666667,
+            "anomaly_index": 1.1920572326427934
+        },
+        {
+            "class": "truck",
+            "l1_mask_norm": 22.791664123535156,
+            "attack_success_rate": 99.77777777777777,
+            "anomaly_index": 1.0915415416184684
+        }
+    ],
+    "suspicious_classes": []
+}

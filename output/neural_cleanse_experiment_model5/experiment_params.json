@@ -1,0 +1,11 @@
+{
+    "model_name": "model5",
+    "dataset_name": "cifar10",
+    "timestamp": "2024-10-31 22:37:51",
+    "parameters": {
+        "lr": 0.1,
+        "num_steps": 250,
+        "lambda_l1": 0.01,
+        "asr_threshold": 95
+    }
+}

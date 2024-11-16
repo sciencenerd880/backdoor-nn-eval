@@ -6,10 +6,7 @@ from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 
 
-if __name__ == "__main__":
-    # Load a pretrained model
-    model_name = "model3"
-    dataset_name = "cifar10"
+def grad_cam_viz(model_name, dataset_name):
     model, device = load_model(model_name, dataset_name)
 
     if dataset_name == "cifar10":
@@ -23,7 +20,7 @@ if __name__ == "__main__":
     # Sample image from CIFAR-10 dataset
     cifar10 = load_dataset(dataset_name, train=False)
 
-    NUM_VIZ_PER_CLASS = 10
+    NUM_VIZ_PER_CLASS = 30
     # Initialize GradCAM with the model and target layer
     with GradCAM(model=model, target_layers=target_layers) as grad_cam:
         # pick 5 data for each class
@@ -59,3 +56,24 @@ if __name__ == "__main__":
                     os.mkdir(f"output/grad_cam_{model_name}/")
                 plt.savefig(f"output/grad_cam_{model_name}/image_{classification_labels[label]}_{idx}.png")
                 plt.close()
+
+
+if __name__ == "__main__":
+    models = [
+        # ("reference_mnist_1", "mnist"),
+        # ("reference_mnist_2", "mnist"),
+        # ("reference_mnist_3", "mnist"),
+        # ("reference_mnist_4", "mnist"),
+        # ("reference_mnist_5", "mnist"),
+        # ("reference_cifar10_2", "cifar10"),
+        # ("reference_cifar10_3", "cifar10"),
+        # ("reference_cifar10_4", "cifar10"),
+        # ("reference_cifar10_5", "cifar10"),
+        # ("model1", "mnist"),
+        ("model2", "cifar10"),
+        # ("model3", "cifar10"),
+        # ("model4", "cifar10"),
+        # ("model5", "cifar10"),
+    ]
+    for model_name, dataset_name in models:
+        grad_cam_viz(model_name, dataset_name)

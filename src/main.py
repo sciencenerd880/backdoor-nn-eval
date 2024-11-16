@@ -20,8 +20,13 @@ if __name__ == "__main__":
         ("model5", "cifar10"),
     ]
     
+    NEURAL_CLEANSE_CUTOFF_STEP = 10
+    GRAD_CAM_NUM_VIZ_PER_CLASS = 20
+
     # Run Neural Cleanse for All Models
     for model_name, dataset_name in models:
-        neural_cleanse(model_name, dataset_name)
+        neural_cleanse(model_name, dataset_name, NEURAL_CLEANSE_CUTOFF_STEP)
         # TODO: Integrate SODA
-        grad_cam_viz(model_name, dataset_name)
+        if dataset_name == "cifar10":
+            # Grad-CAM can only run for CIFAR-10
+            grad_cam_viz(model_name, dataset_name, GRAD_CAM_NUM_VIZ_PER_CLASS)

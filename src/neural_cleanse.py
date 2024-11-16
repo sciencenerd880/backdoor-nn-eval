@@ -395,7 +395,7 @@ def create_experiment_folder():
 
 
 # Main function
-def neural_cleanse(model_name, dataset_name):
+def neural_cleanse(model_name, dataset_name, cutoff_step=10):
     experiment_dir = create_experiment_folder()
     print(f"Starting Neural Cleanse analysis for {model_name} on {dataset_name}")
     print(f"Output directory: {experiment_dir}")
@@ -426,7 +426,7 @@ def neural_cleanse(model_name, dataset_name):
         
         mask, delta = generate_trigger(
             model, testloader, target_class, device,
-            lr=0.1, num_steps=250, lambda_l1=0.01
+            lr=0.1, num_steps=250, lambda_l1=0.01, cutoff_step=cutoff_step
         )
         
         # Calculate L1 pixel norm of just the mask
@@ -580,5 +580,6 @@ if __name__ == "__main__":
         # ("model5", "cifar10"),
     ]
     
+    CUTOFF_STEP = 10
     for model_name, dataset_name in models:
-        neural_cleanse(model_name, dataset_name)
+        neural_cleanse(model_name, dataset_name, cutoff_step=CUTOFF_STEP)

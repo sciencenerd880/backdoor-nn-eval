@@ -3,18 +3,52 @@
 ## Overview
 This project evaluates neural networks for potential backdoor attacks and helps to identify backdoor triggers. It also allows for creating backdoored models on MNIST and CIFAR-10 datasets.
 
-### Project Structure
+## Project Structure
 - `data/`: Stores the MNIST and CIFAR-10 datasets.
 - `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `output/`: Contains the output for Neural Cleanse and Grad-CAM
 - `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
 
-### How to Run
-1. **Install Dependencies**: Run `pip install -r requirements.txt` to install required packages.
+## How to Run
+1. Run `pip install -r requirements.txt` to install required packages.
+2. Open Main Function in `src/main.py`, choose which model you're going to run Neural Cleanse and Grad-CAM for. By default it will run for all models.
 
-2. **Main Function**: Open Main Function in `src/main.py` and choose which model you're going to run Neural Cleanse and Grad-CAM for. Run it using command `python src/main.py` 
+    For Neural Cleanse, you can change the number of iteration before cutoff during neural cleanse, set as 10 by default. Change this with constant `NEURAL_CLEANSE_CUTOFF_STEP`.
 
-### Requirements
+    For Grad-CAM, you can change the number of visualization it will generate for each label class, set as 20 by default. Change this with constant `GRAD_CAM_NUM_VIZ_PER_CLASS`.
+
+3. Run it using command `python src/main.py` 
+    - If you want to run just the Neural Cleanse, open `src/neural_cleanse.py`, pick the model, and ruh with `python src/neural_cleanse.py`. This script by default will using iteration cutoff at 10. Change this with the constant `CUTOFF_STEP`.
+    - If you want to run just Grad-CAM, open `src/grad_cam.py`, pick which CIFAR-10 models to run, and run with `python src/grad_cam.py`. This script by default will run and generate 20 numbers of images per label class. Change this with the constant `NUM_VIZ_PER_CLASS`
+4. Check the output for Neural Cleanse at `output/` folder, in folders called `neural_cleanse_experiment_{time when the script was run}/` (e.g. `neural_cleanse_experiment_20241031_103155/`).
+    - In these folders, you will see several subfolders that are explained in [this section](#neural-cleanse-result).
+5. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
+    - In these folders, you will see several images that are explained in [this section](#grad-cam-result)
+
+## Neural Cleanse Result
+Subfolders:
+- reports/:
+    - `experiment_log.txt`: Log of the entire experiment during the runtime of neural_cleanse.py for this specific model. 
+    - `{model name}_mask_analysis.json`: Complete result of the mask analysis. For each class, there is L1 Mask Norm, Attack Success Rate, and Anomaly Index.
+- triggers/:
+    - all/: Contains all the triggers saved in pt file. These triggers can be loaded as a dictionary of images containing mask and delta in order to do visualization.
+    - suspicious/: Contains all the suspicious trigger according to neural cleanse standards of suspicious class (ASR > 75%, Anomaly Index > 2, L1 Norm < Median throughout the class).
+- visualizations/:
+    - `NeuralCleanse_MaskL1Reg_Model_{model name}_Target_{target class}.png`: Image of the generated trigger mask in grayscale.
+    - `NeuralCleanse_MaskL1Reg_Model_{model name}_Target_{target class}_rgb.png`: Image of the generated trigger mask in RGB.
+
+Files:
+- `experiment_params.json`: Stores the parameters that's used in the run which includes model_name, dataset_name, timestamp, learning rate, number of steps, lambda l1, and attack success rate (ASR) threshold.
+
+## Grad-CAM Result
+- `image_{label class}_{data index}.png`: Image containing the original image, label and prediction, and also the Grad-CAM result image that's generated from the last layer.
+
+## Additional Notes
+1. Grad-CAM can only run for CIFAR-10 models because they are Convolutional Neural Networks (CNN). Grad-CAM relies on the Convolutional layers, which it will then leverages spatial information present in those convolutional layers to create visual explanations.
+2. Because of the timestamp, your neural cleanse results will not get overwritten
+3. Grad-CAM results WILL get overwritten, however, because the folder naming only uses model name.
+
+<!-- ## Requirements
 Given a (third-party trained) neural network, your task is to evaluate whether there are backdoors embedded in the neural network. 
 We will provide multiple backdoored (or not) neural networks trained on the MNIST, CIFAR-10, and CIFAR-100 datasets. 
 You as a team will provide us one backdoored neural network trained on the same datasets.
@@ -22,4 +56,4 @@ You will be evaluated in terms of (1) whether an alarm is triggered if there is 
 
 - Each folder contains a backdoor model trained with different backdoor attacks, triggers, and targets.
 - Model 1 is trained on MNIST dataset. The rest are trained on CIFAR10 dataset.
-- The architectures of the models can be found in the according python files (model_mnist.py for the MNIST model and model_cifar10.py for the CIFAR10 models).
+- The architectures of the models can be found in the according python files (model_mnist.py for the MNIST model and model_cifar10.py for the CIFAR10 models). -->

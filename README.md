@@ -7,16 +7,12 @@ This project evaluates neural networks for potential backdoor attacks and helps 
 - `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `data/`: Stores the MNIST and CIFAR-10 datasets.
 - `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
+- `output/`: Contains the output for Neural Cleanse and Grad-CAM
 
 ### How to Run
-1. **Install Dependencies:**
-   Run `pip install -r requirements.txt` to install required packages.
+1. **Install Dependencies**: Run `pip install -r requirements.txt` to install required packages.
 
-2. **Evaluate Models:**
-   Use `evaluate_model.py` to load and test the model accuracy on clean data.
-
-   ```bash
-   python src/evaluate_model.py
+2. **Main Function**: Open Main Function in `src/main.py` and choose which model you're going to run Neural Cleanse and Grad-CAM for. Run it using command `python src/main.py` 
 
 ### Requirements
 Given a (third-party trained) neural network, your task is to evaluate whether there are backdoors embedded in the neural network. 

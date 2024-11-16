@@ -1,7 +1,7 @@
 {
     "model_name": "reference_mnist_4",
     "dataset_name": "mnist",
-    "timestamp": "2024-11-16 11:43:15",
+    "timestamp": "2024-11-16 14:55:46",
     "parameters": {
         "lr": 0.1,
         "num_steps": 250,

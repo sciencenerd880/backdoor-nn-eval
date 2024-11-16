@@ -1,66 +1,66 @@
 {
     "model_name": "reference_mnist_2",
-    "analysis_timestamp": "2024-11-16 11:33:29.382597",
+    "analysis_timestamp": "2024-11-16 14:35:25.242759",
     "class_analysis": [
         {
             "class": "0",
-            "l1_mask_norm": 20.472591400146484,
-            "attack_success_rate": 99.34589800443459,
-            "anomaly_index": 0.07219957434125852
+            "l1_mask_norm": 19.339405059814453,
+            "attack_success_rate": 99.3569844789357,
+            "anomaly_index": 0.039773828878463376
         },
         {
             "class": "1",
-            "l1_mask_norm": 25.215499877929688,
-            "attack_success_rate": 99.07501410039481,
-            "anomaly_index": 0.6810210872662372
+            "l1_mask_norm": 24.18462371826172,
+            "attack_success_rate": 99.06373378454597,
+            "anomaly_index": 0.6757850447670684
         },
         {
             "class": "2",
-            "l1_mask_norm": 14.62578010559082,
-            "attack_success_rate": 99.542818911686,
-            "anomaly_index": 0.6783239735645173
+            "l1_mask_norm": 13.750656127929688,
+            "attack_success_rate": 99.50936663693132,
+            "anomaly_index": 0.6938374390603247
         },
         {
             "class": "3",
-            "l1_mask_norm": 17.09963035583496,
-            "attack_success_rate": 99.38820912124582,
-            "anomaly_index": 0.3607691948546762
+            "l1_mask_norm": 16.663558959960938,
+            "attack_success_rate": 99.48832035595106,
+            "anomaly_index": 0.311473091326374
         },
         {
             "class": "4",
-            "l1_mask_norm": 23.18220329284668,
-            "attack_success_rate": 99.42337547127967,
-            "anomaly_index": 0.42001780015789714
+            "l1_mask_norm": 21.179264068603516,
+            "attack_success_rate": 99.24595253936572,
+            "anomaly_index": 0.2812842843877173
         },
         {
             "class": "5",
-            "l1_mask_norm": 19.34767723083496,
+            "l1_mask_norm": 18.733400344848633,
             "attack_success_rate": 99.24242424242425,
-            "anomaly_index": 0.07219957434125852
+            "anomaly_index": 0.039773828878463376
         },
         {
             "class": "6",
-            "l1_mask_norm": 13.319108963012695,
-            "attack_success_rate": 99.74563149745632,
-            "anomaly_index": 0.8460542820126468
+            "l1_mask_norm": 11.52646255493164,
+            "attack_success_rate": 99.5465604954656,
+            "anomaly_index": 0.9857978558039202
         },
         {
             "class": "7",
-            "l1_mask_norm": 14.685503959655762,
+            "l1_mask_norm": 13.907901763916016,
             "attack_success_rate": 99.45385644226482,
-            "anomaly_index": 0.6706575453886731
+            "anomaly_index": 0.673196474186122
         },
         {
             "class": "8",
-            "l1_mask_norm": 27.859163284301758,
-            "attack_success_rate": 99.0804343009085,
-            "anomaly_index": 1.0203738625245367
+            "l1_mask_norm": 26.8310489654541,
+            "attack_success_rate": 99.03611788167517,
+            "anomaly_index": 1.023170014956324
         },
         {
             "class": "9",
-            "l1_mask_norm": 31.119892120361328,
-            "attack_success_rate": 98.96563229896563,
-            "anomaly_index": 1.438935990068638
+            "l1_mask_norm": 30.050485610961914,
+            "attack_success_rate": 98.93226559893226,
+            "anomaly_index": 1.4457717507553736
         }
     ],
     "suspicious_classes": []

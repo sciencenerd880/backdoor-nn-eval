@@ -19,7 +19,7 @@ import os
 import numpy as np
 import sys
 
-MIN_ANOMALY_INDEX = 2 # Gan plz put magic number
+MIN_ANOMALY_INDEX = 2
 
 # Define perturbation mask and delta pattern which are trainable parameters
 class TriggerMask(nn.Module):
@@ -338,8 +338,6 @@ def process_single_class(args):
     print(f"Attack Success Rate for target class {target_class}: {attack_success_rate:.2f}%")
     
     return (mask, delta)
-
-
 
 
 def summarize_results(model_name, classification_labels, l1_pixel_norms, 

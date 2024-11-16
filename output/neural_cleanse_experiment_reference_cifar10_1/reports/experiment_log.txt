@@ -12,45 +12,85 @@ Processing Target Class: 0
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8996
-  Attack Success Rate: 99.96%
+  Successfully triggered to target: 8998
+  Attack Success Rate: 99.98%
 
 Step   0:
-  L1 Mask Norm: 340.8197
-  ASR: 99.96%
+  L1 Mask Norm: 339.1860
+  ASR: 99.98%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8958
-  Attack Success Rate: 99.53%
+  Successfully triggered to target: 8955
+  Attack Success Rate: 99.50%
 
 Step   5:
-  L1 Mask Norm: 62.6588
-  ASR: 99.53%
+  L1 Mask Norm: 62.2043
+  ASR: 99.50%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8980
-  Attack Success Rate: 99.78%
+  Successfully triggered to target: 8942
+  Attack Success Rate: 99.36%
 
 Step  10:
-  L1 Mask Norm: 41.1365
-  ASR: 99.78%
+  L1 Mask Norm: 38.4006
+  ASR: 99.36%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8954
+  Attack Success Rate: 99.49%
+
+Step  15:
+  L1 Mask Norm: 31.4078
+  ASR: 99.49%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8968
+  Attack Success Rate: 99.64%
+
+Step  20:
+  L1 Mask Norm: 28.8189
+  ASR: 99.64%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
+
+Step  25:
+  L1 Mask Norm: 27.7778
+  ASR: 99.68%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8962
+  Attack Success Rate: 99.58%
+
+Step  30:
+  L1 Mask Norm: 26.2159
+  ASR: 99.58%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 41.1365
-  ASR: 99.78%
+  L1 Mask Norm: 26.2159
+  ASR: 99.58%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8980
-  Attack Success Rate: 99.78%
+  Successfully triggered to target: 8962
+  Attack Success Rate: 99.58%
 Final Results for Class airplane:
-  L1 Mask Norm: 41.1365
-  Attack Success Rate: 99.78%
+  L1 Mask Norm: 26.2159
+  Attack Success Rate: 99.58%
 
 ================================================================================
 Target Class: automobile
@@ -66,41 +106,81 @@ ASR Summary:
   Attack Success Rate: 99.99%
 
 Step   0:
-  L1 Mask Norm: 326.7902
+  L1 Mask Norm: 324.5939
   ASR: 99.99%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8981
-  Attack Success Rate: 99.79%
+  Successfully triggered to target: 8969
+  Attack Success Rate: 99.66%
 
 Step   5:
-  L1 Mask Norm: 52.0383
-  ASR: 99.79%
+  L1 Mask Norm: 52.5936
+  ASR: 99.66%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8978
-  Attack Success Rate: 99.76%
+  Successfully triggered to target: 8984
+  Attack Success Rate: 99.82%
 
 Step  10:
-  L1 Mask Norm: 32.4806
-  ASR: 99.76%
+  L1 Mask Norm: 32.1791
+  ASR: 99.82%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8985
+  Attack Success Rate: 99.83%
+
+Step  15:
+  L1 Mask Norm: 25.3555
+  ASR: 99.83%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8976
+  Attack Success Rate: 99.73%
+
+Step  20:
+  L1 Mask Norm: 21.8134
+  ASR: 99.73%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8979
+  Attack Success Rate: 99.77%
+
+Step  25:
+  L1 Mask Norm: 20.3688
+  ASR: 99.77%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8986
+  Attack Success Rate: 99.84%
+
+Step  30:
+  L1 Mask Norm: 19.7947
+  ASR: 99.84%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 32.4806
-  ASR: 99.76%
+  L1 Mask Norm: 19.7947
+  ASR: 99.84%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8978
-  Attack Success Rate: 99.76%
+  Successfully triggered to target: 8986
+  Attack Success Rate: 99.84%
 Final Results for Class automobile:
-  L1 Mask Norm: 32.4806
-  Attack Success Rate: 99.76%
+  L1 Mask Norm: 19.7947
+  Attack Success Rate: 99.84%
 
 ================================================================================
 Target Class: bird
@@ -112,12 +192,42 @@ Processing Target Class: 2
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8997
-  Attack Success Rate: 99.97%
+  Successfully triggered to target: 8996
+  Attack Success Rate: 99.96%
 
 Step   0:
-  L1 Mask Norm: 277.6496
-  ASR: 99.97%
+  L1 Mask Norm: 281.2788
+  ASR: 99.96%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8964
+  Attack Success Rate: 99.60%
+
+Step   5:
+  L1 Mask Norm: 46.4305
+  ASR: 99.60%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
+
+Step  10:
+  L1 Mask Norm: 31.3437
+  ASR: 99.68%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
+
+Step  15:
+  L1 Mask Norm: 27.0651
+  ASR: 99.68%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
@@ -125,32 +235,42 @@ ASR Summary:
   Successfully triggered to target: 8967
   Attack Success Rate: 99.63%
 
-Step   5:
-  L1 Mask Norm: 46.5000
+Step  20:
+  L1 Mask Norm: 24.7565
   ASR: 99.63%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8953
-  Attack Success Rate: 99.48%
+  Successfully triggered to target: 8970
+  Attack Success Rate: 99.67%
 
-Step  10:
-  L1 Mask Norm: 31.0533
-  ASR: 99.48%
+Step  25:
+  L1 Mask Norm: 24.3594
+  ASR: 99.67%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
-
-Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 31.0533
-  ASR: 99.48%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8953
-  Attack Success Rate: 99.48%
+  Successfully triggered to target: 8968
+  Attack Success Rate: 99.64%
+
+Step  30:
+  L1 Mask Norm: 22.0894
+  ASR: 99.64%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+Stopping: L1 norm not improving. Best trigger has:
+  L1 Mask Norm: 22.0894
+  ASR: 99.64%
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8968
+  Attack Success Rate: 99.64%
 Final Results for Class bird:
-  L1 Mask Norm: 31.0533
-  Attack Success Rate: 99.48%
+  L1 Mask Norm: 22.0894
+  Attack Success Rate: 99.64%
 
 ================================================================================
 Target Class: cat
@@ -166,41 +286,81 @@ ASR Summary:
   Attack Success Rate: 99.99%
 
 Step   0:
-  L1 Mask Norm: 296.1347
+  L1 Mask Norm: 295.1918
   ASR: 99.99%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8911
-  Attack Success Rate: 99.01%
+  Successfully triggered to target: 8964
+  Attack Success Rate: 99.60%
 
 Step   5:
-  L1 Mask Norm: 50.7139
-  ASR: 99.01%
+  L1 Mask Norm: 48.9397
+  ASR: 99.60%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8974
-  Attack Success Rate: 99.71%
+  Successfully triggered to target: 8951
+  Attack Success Rate: 99.46%
 
 Step  10:
-  L1 Mask Norm: 31.9569
-  ASR: 99.71%
+  L1 Mask Norm: 31.7699
+  ASR: 99.46%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8975
+  Attack Success Rate: 99.72%
+
+Step  15:
+  L1 Mask Norm: 26.6518
+  ASR: 99.72%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8976
+  Attack Success Rate: 99.73%
+
+Step  20:
+  L1 Mask Norm: 23.4971
+  ASR: 99.73%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8973
+  Attack Success Rate: 99.70%
+
+Step  25:
+  L1 Mask Norm: 21.7924
+  ASR: 99.70%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8980
+  Attack Success Rate: 99.78%
+
+Step  30:
+  L1 Mask Norm: 21.2641
+  ASR: 99.78%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 31.9569
-  ASR: 99.71%
+  L1 Mask Norm: 21.2641
+  ASR: 99.78%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8974
-  Attack Success Rate: 99.71%
+  Successfully triggered to target: 8980
+  Attack Success Rate: 99.78%
 Final Results for Class cat:
-  L1 Mask Norm: 31.9569
-  Attack Success Rate: 99.71%
+  L1 Mask Norm: 21.2641
+  Attack Success Rate: 99.78%
 
 ================================================================================
 Target Class: deer
@@ -212,45 +372,85 @@ Processing Target Class: 4
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8994
-  Attack Success Rate: 99.93%
+  Successfully triggered to target: 8995
+  Attack Success Rate: 99.94%
 
 Step   0:
-  L1 Mask Norm: 261.2216
-  ASR: 99.93%
+  L1 Mask Norm: 260.3615
+  ASR: 99.94%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8974
-  Attack Success Rate: 99.71%
+  Successfully triggered to target: 8973
+  Attack Success Rate: 99.70%
 
 Step   5:
-  L1 Mask Norm: 37.9305
-  ASR: 99.71%
+  L1 Mask Norm: 37.1980
+  ASR: 99.70%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8961
-  Attack Success Rate: 99.57%
+  Successfully triggered to target: 8970
+  Attack Success Rate: 99.67%
 
 Step  10:
-  L1 Mask Norm: 23.8434
-  ASR: 99.57%
+  L1 Mask Norm: 21.5029
+  ASR: 99.67%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
+
+Step  15:
+  L1 Mask Norm: 18.2393
+  ASR: 99.68%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8952
+  Attack Success Rate: 99.47%
+
+Step  20:
+  L1 Mask Norm: 16.5577
+  ASR: 99.47%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
+
+Step  25:
+  L1 Mask Norm: 16.4437
+  ASR: 99.68%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8977
+  Attack Success Rate: 99.74%
+
+Step  30:
+  L1 Mask Norm: 15.7300
+  ASR: 99.74%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 23.8434
-  ASR: 99.57%
+  L1 Mask Norm: 15.7300
+  ASR: 99.74%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8961
-  Attack Success Rate: 99.57%
+  Successfully triggered to target: 8977
+  Attack Success Rate: 99.74%
 Final Results for Class deer:
-  L1 Mask Norm: 23.8434
-  Attack Success Rate: 99.57%
+  L1 Mask Norm: 15.7300
+  Attack Success Rate: 99.74%
 
 ================================================================================
 Target Class: dog
@@ -262,45 +462,85 @@ Processing Target Class: 5
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8994
-  Attack Success Rate: 99.93%
+  Successfully triggered to target: 8997
+  Attack Success Rate: 99.97%
 
 Step   0:
-  L1 Mask Norm: 325.5972
-  ASR: 99.93%
+  L1 Mask Norm: 325.9553
+  ASR: 99.97%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8989
-  Attack Success Rate: 99.88%
+  Successfully triggered to target: 8968
+  Attack Success Rate: 99.64%
 
 Step   5:
-  L1 Mask Norm: 46.7799
-  ASR: 99.88%
+  L1 Mask Norm: 46.9602
+  ASR: 99.64%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8989
-  Attack Success Rate: 99.88%
+  Successfully triggered to target: 8992
+  Attack Success Rate: 99.91%
 
 Step  10:
-  L1 Mask Norm: 25.2213
-  ASR: 99.88%
+  L1 Mask Norm: 25.2689
+  ASR: 99.91%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8988
+  Attack Success Rate: 99.87%
+
+Step  15:
+  L1 Mask Norm: 19.7098
+  ASR: 99.87%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8991
+  Attack Success Rate: 99.90%
+
+Step  20:
+  L1 Mask Norm: 17.2162
+  ASR: 99.90%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8992
+  Attack Success Rate: 99.91%
+
+Step  25:
+  L1 Mask Norm: 16.0550
+  ASR: 99.91%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8993
+  Attack Success Rate: 99.92%
+
+Step  30:
+  L1 Mask Norm: 15.2147
+  ASR: 99.92%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 25.2213
-  ASR: 99.88%
+  L1 Mask Norm: 15.2147
+  ASR: 99.92%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8989
-  Attack Success Rate: 99.88%
+  Successfully triggered to target: 8993
+  Attack Success Rate: 99.92%
 Final Results for Class dog:
-  L1 Mask Norm: 25.2213
-  Attack Success Rate: 99.88%
+  L1 Mask Norm: 15.2147
+  Attack Success Rate: 99.92%
 
 ================================================================================
 Target Class: frog
@@ -312,45 +552,84 @@ Processing Target Class: 6
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8992
-  Attack Success Rate: 99.91%
+  Successfully triggered to target: 8996
+  Attack Success Rate: 99.96%
 
 Step   0:
-  L1 Mask Norm: 248.0011
-  ASR: 99.91%
+  L1 Mask Norm: 247.3979
+  ASR: 99.96%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8977
-  Attack Success Rate: 99.74%
+  Successfully triggered to target: 8946
+  Attack Success Rate: 99.40%
 
 Step   5:
-  L1 Mask Norm: 39.6734
-  ASR: 99.74%
+  L1 Mask Norm: 40.7432
+  ASR: 99.40%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8969
-  Attack Success Rate: 99.66%
+  Successfully triggered to target: 8944
+  Attack Success Rate: 99.38%
 
 Step  10:
-  L1 Mask Norm: 24.9243
-  ASR: 99.66%
+  L1 Mask Norm: 30.5050
+  ASR: 99.38%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
-
-Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 24.9243
-  ASR: 99.66%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8969
-  Attack Success Rate: 99.66%
+  Successfully triggered to target: 8968
+  Attack Success Rate: 99.64%
+
+Step  15:
+  L1 Mask Norm: 28.8372
+  ASR: 99.64%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8966
+  Attack Success Rate: 99.62%
+
+Step  20:
+  L1 Mask Norm: 24.5474
+  ASR: 99.62%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8954
+  Attack Success Rate: 99.49%
+
+Step  25:
+  L1 Mask Norm: 22.3247
+  ASR: 99.49%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8962
+  Attack Success Rate: 99.58%
+
+Step  30:
+  L1 Mask Norm: 22.4863
+  ASR: 99.58%
+
+Stopping: L1 norm not improving. Best trigger has:
+  L1 Mask Norm: 22.3247
+  ASR: 99.49%
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8954
+  Attack Success Rate: 99.49%
 Final Results for Class frog:
-  L1 Mask Norm: 24.9243
-  Attack Success Rate: 99.66%
+  L1 Mask Norm: 22.3247
+  Attack Success Rate: 99.49%
 
 ================================================================================
 Target Class: horse
@@ -366,41 +645,81 @@ ASR Summary:
   Attack Success Rate: 99.99%
 
 Step   0:
-  L1 Mask Norm: 342.2606
+  L1 Mask Norm: 339.2416
   ASR: 99.99%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8957
-  Attack Success Rate: 99.52%
+  Successfully triggered to target: 8947
+  Attack Success Rate: 99.41%
 
 Step   5:
-  L1 Mask Norm: 58.7031
-  ASR: 99.52%
+  L1 Mask Norm: 56.7841
+  ASR: 99.41%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8965
-  Attack Success Rate: 99.61%
+  Successfully triggered to target: 8974
+  Attack Success Rate: 99.71%
 
 Step  10:
-  L1 Mask Norm: 34.8696
-  ASR: 99.61%
+  L1 Mask Norm: 34.6023
+  ASR: 99.71%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8980
+  Attack Success Rate: 99.78%
+
+Step  15:
+  L1 Mask Norm: 28.1796
+  ASR: 99.78%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8984
+  Attack Success Rate: 99.82%
+
+Step  20:
+  L1 Mask Norm: 26.3348
+  ASR: 99.82%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8984
+  Attack Success Rate: 99.82%
+
+Step  25:
+  L1 Mask Norm: 24.3481
+  ASR: 99.82%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8976
+  Attack Success Rate: 99.73%
+
+Step  30:
+  L1 Mask Norm: 22.4538
+  ASR: 99.73%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 34.8696
-  ASR: 99.61%
+  L1 Mask Norm: 22.4538
+  ASR: 99.73%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8965
-  Attack Success Rate: 99.61%
+  Successfully triggered to target: 8976
+  Attack Success Rate: 99.73%
 Final Results for Class horse:
-  L1 Mask Norm: 34.8696
-  Attack Success Rate: 99.61%
+  L1 Mask Norm: 22.4538
+  Attack Success Rate: 99.73%
 
 ================================================================================
 Target Class: ship
@@ -412,45 +731,85 @@ Processing Target Class: 8
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8999
-  Attack Success Rate: 99.99%
+  Successfully triggered to target: 8994
+  Attack Success Rate: 99.93%
 
 Step   0:
-  L1 Mask Norm: 362.3153
-  ASR: 99.99%
+  L1 Mask Norm: 359.7736
+  ASR: 99.93%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8964
-  Attack Success Rate: 99.60%
+  Successfully triggered to target: 8957
+  Attack Success Rate: 99.52%
 
 Step   5:
-  L1 Mask Norm: 69.0396
-  ASR: 99.60%
+  L1 Mask Norm: 68.7181
+  ASR: 99.52%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8928
-  Attack Success Rate: 99.20%
+  Successfully triggered to target: 8951
+  Attack Success Rate: 99.46%
 
 Step  10:
-  L1 Mask Norm: 43.4873
-  ASR: 99.20%
+  L1 Mask Norm: 42.6733
+  ASR: 99.46%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8963
+  Attack Success Rate: 99.59%
+
+Step  15:
+  L1 Mask Norm: 33.2464
+  ASR: 99.59%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8963
+  Attack Success Rate: 99.59%
+
+Step  20:
+  L1 Mask Norm: 29.0633
+  ASR: 99.59%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8951
+  Attack Success Rate: 99.46%
+
+Step  25:
+  L1 Mask Norm: 26.3871
+  ASR: 99.46%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8944
+  Attack Success Rate: 99.38%
+
+Step  30:
+  L1 Mask Norm: 24.8450
+  ASR: 99.38%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 43.4873
-  ASR: 99.20%
+  L1 Mask Norm: 24.8450
+  ASR: 99.38%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8928
-  Attack Success Rate: 99.20%
+  Successfully triggered to target: 8944
+  Attack Success Rate: 99.38%
 Final Results for Class ship:
-  L1 Mask Norm: 43.4873
-  Attack Success Rate: 99.20%
+  L1 Mask Norm: 24.8450
+  Attack Success Rate: 99.38%
 
 ================================================================================
 Target Class: truck
@@ -466,126 +825,170 @@ ASR Summary:
   Attack Success Rate: 100.00%
 
 Step   0:
-  L1 Mask Norm: 306.5187
+  L1 Mask Norm: 306.4141
   ASR: 100.00%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8977
-  Attack Success Rate: 99.74%
+  Successfully triggered to target: 8958
+  Attack Success Rate: 99.53%
 
 Step   5:
-  L1 Mask Norm: 43.0435
-  ASR: 99.74%
+  L1 Mask Norm: 41.8484
+  ASR: 99.53%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8964
-  Attack Success Rate: 99.60%
+  Successfully triggered to target: 8971
+  Attack Success Rate: 99.68%
 
 Step  10:
-  L1 Mask Norm: 23.8620
-  ASR: 99.60%
+  L1 Mask Norm: 24.2681
+  ASR: 99.68%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8984
+  Attack Success Rate: 99.82%
+
+Step  15:
+  L1 Mask Norm: 18.9359
+  ASR: 99.82%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8988
+  Attack Success Rate: 99.87%
+
+Step  20:
+  L1 Mask Norm: 15.9982
+  ASR: 99.87%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8978
+  Attack Success Rate: 99.76%
+
+Step  25:
+  L1 Mask Norm: 14.0697
+  ASR: 99.76%
+  Found better trigger! (Lower L1 norm with ASR >= 95%)
+
+ASR Summary:
+  Total non-target samples tested: 9000
+  Successfully triggered to target: 8988
+  Attack Success Rate: 99.87%
+
+Step  30:
+  L1 Mask Norm: 14.0537
+  ASR: 99.87%
   Found better trigger! (Lower L1 norm with ASR >= 95%)
 
 Stopping: L1 norm not improving. Best trigger has:
-  L1 Mask Norm: 23.8620
-  ASR: 99.60%
+  L1 Mask Norm: 14.0537
+  ASR: 99.87%
 
 ASR Summary:
   Total non-target samples tested: 9000
-  Successfully triggered to target: 8964
-  Attack Success Rate: 99.60%
+  Successfully triggered to target: 8988
+  Attack Success Rate: 99.87%
 Final Results for Class truck:
-  L1 Mask Norm: 23.8620
-  Attack Success Rate: 99.60%
+  L1 Mask Norm: 14.0537
+  Attack Success Rate: 99.87%
 
 MAD Analysis Results:
-Median L1 Mask Norm: 31.5051
-MAD: 9.5365
+Median L1 Mask Norm: 21.6768
+MAD: 3.7438
 
 Detailed Anomaly Analysis:
 Class airplane:
-  L1 Norm: 41.1365
-  Anomaly Index: 1.0099
-  ASR: 99.78%
+  L1 Norm: 26.2159
+  Anomaly Index: 1.2124
+  ASR: 99.58%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: False
     ASR > 75%: True
 Class automobile:
-  L1 Norm: 32.4806
-  Anomaly Index: 0.1023
-  ASR: 99.76%
-  Conditions met:
-    Anomaly Index > 2: False
-    L1 Norm < Median: False
-    ASR > 75%: True
-Class bird:
-  L1 Norm: 31.0533
-  Anomaly Index: 0.0474
-  ASR: 99.48%
+  L1 Norm: 19.7947
+  Anomaly Index: 0.5027
+  ASR: 99.84%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: True
     ASR > 75%: True
-Class cat:
-  L1 Norm: 31.9569
-  Anomaly Index: 0.0474
-  ASR: 99.71%
+Class bird:
+  L1 Norm: 22.0894
+  Anomaly Index: 0.1102
+  ASR: 99.64%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: False
     ASR > 75%: True
+Class cat:
+  L1 Norm: 21.2641
+  Anomaly Index: 0.1102
+  ASR: 99.78%
+  Conditions met:
+    Anomaly Index > 2: False
+    L1 Norm < Median: True
+    ASR > 75%: True
 Class deer:
-  L1 Norm: 23.8434
-  Anomaly Index: 0.8034
-  ASR: 99.57%
+  L1 Norm: 15.7300
+  Anomaly Index: 1.5884
+  ASR: 99.74%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: True
     ASR > 75%: True
 Class dog:
-  L1 Norm: 25.2213
-  Anomaly Index: 0.6589
-  ASR: 99.88%
+  L1 Norm: 15.2147
+  Anomaly Index: 1.7261
+  ASR: 99.92%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: True
     ASR > 75%: True
 Class frog:
-  L1 Norm: 24.9243
-  Anomaly Index: 0.6901
-  ASR: 99.66%
+  L1 Norm: 22.3247
+  Anomaly Index: 0.1731
+  ASR: 99.49%
   Conditions met:
     Anomaly Index > 2: False
-    L1 Norm < Median: True
+    L1 Norm < Median: False
     ASR > 75%: True
 Class horse:
-  L1 Norm: 34.8696
-  Anomaly Index: 0.3528
-  ASR: 99.61%
+  L1 Norm: 22.4538
+  Anomaly Index: 0.2075
+  ASR: 99.73%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: False
     ASR > 75%: True
 Class ship:
-  L1 Norm: 43.4873
-  Anomaly Index: 1.2565
-  ASR: 99.20%
+  L1 Norm: 24.8450
+  Anomaly Index: 0.8463
+  ASR: 99.38%
   Conditions met:
     Anomaly Index > 2: False
     L1 Norm < Median: False
     ASR > 75%: True
 Class truck:
-  L1 Norm: 23.8620
-  Anomaly Index: 0.8015
-  ASR: 99.60%
+  L1 Norm: 14.0537
+  Anomaly Index: 2.0362
+  ASR: 99.87%
   Conditions met:
-    Anomaly Index > 2: False
+    Anomaly Index > 2: True
     L1 Norm < Median: True
     ASR > 75%: True
 
-No suspicious classes detected.
+Suspicious Classes Detected:
+  Class truck:
+    L1 Mask Norm: 14.0537
+    Anomaly Index: 2.0362
+    ASR: 99.87%

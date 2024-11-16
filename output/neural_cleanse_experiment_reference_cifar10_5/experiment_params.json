@@ -1,7 +1,7 @@
 {
     "model_name": "reference_cifar10_5",
     "dataset_name": "cifar10",
-    "timestamp": "2024-11-16 04:41:22",
+    "timestamp": "2024-11-16 15:20:31",
     "parameters": {
         "lr": 0.1,
         "num_steps": 250,

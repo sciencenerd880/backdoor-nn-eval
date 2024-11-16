@@ -1,4 +1,4 @@
-from neural_cleanse_2 import neural_cleanse
+from neural_cleanse import neural_cleanse
 from grad_cam import grad_cam_viz
 
 

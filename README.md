@@ -4,10 +4,10 @@
 This project evaluates neural networks for potential backdoor attacks and helps to identify backdoor triggers. It also allows for creating backdoored models on MNIST and CIFAR-10 datasets.
 
 ### Project Structure
-- `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `data/`: Stores the MNIST and CIFAR-10 datasets.
-- `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
+- `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `output/`: Contains the output for Neural Cleanse and Grad-CAM
+- `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
 
 ### How to Run
 1. **Install Dependencies**: Run `pip install -r requirements.txt` to install required packages.

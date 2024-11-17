@@ -40,6 +40,31 @@ python semantic_mitigation.py --option=detect --reanalyze=1 --arch=CIFAR10Net --
 7. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
     - In these folders, you will see several images that are explained in [this section](#grad-cam-result)
 
+8. After obtaining Neural Cleanse results, run `python src/anomaly_detection_by_reference.py` to perform MAD with reference L1 backdoor detection. The results will be organized in the following structure:
+    ```
+    output/
+    ├── neural_cleanse_experiment_model1/
+    │   ├── reports/
+    │   │   ├── model1_mask_analysis.json
+    │   ├── triggers/
+    │   └── visualizations/
+    ├── neural_cleanse_experiment_model2/
+    ├── neural_cleanse_experiment_model3/
+    ├── neural_cleanse_experiment_model4/
+    ├── neural_cleanse_experiment_model5/
+    ├── neural_cleanse_experiment_reference_cifar10_1/
+    │   ├── reports/
+    │   │   ├── reference_cifar10_1_mask_analysis.json
+    │   ├── triggers/
+    │   └── visualizations/
+    ├── neural_cleanse_experiment_reference_cifar10_2/
+    ├── neural_cleanse_experiment_reference_cifar10_3/
+    ├── neural_cleanse_experiment_reference_cifar10_4/
+    └── neural_cleanse_experiment_reference_mnist_1/
+     ...
+
+    ```
+
 ## Neural Cleanse Result
 Subfolders:
 - reports/:

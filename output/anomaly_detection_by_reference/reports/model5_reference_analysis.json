@@ -1,0 +1,96 @@
+{
+    "model_name": "model5",
+    "analysis_timestamp": "2024-11-17 12:05:15.251749",
+    "class_analysis": [
+        {
+            "class": "airplane",
+            "l1_mask_norm": 23.38382911682129,
+            "reference_median": 22.31569004058838,
+            "reference_mad": 2.632191312789917,
+            "anomaly_index": 0.40579842013868145,
+            "attack_success_rate": 99.9
+        },
+        {
+            "class": "automobile",
+            "l1_mask_norm": 15.392524719238281,
+            "reference_median": 20.164280891418457,
+            "reference_mad": 3.4548198497772216,
+            "anomaly_index": 1.3811881312676477,
+            "attack_success_rate": 99.88888888888889
+        },
+        {
+            "class": "bird",
+            "l1_mask_norm": 21.71259307861328,
+            "reference_median": 23.646499633789062,
+            "reference_mad": 5.122521450805664,
+            "anomaly_index": 0.37753020143461163,
+            "attack_success_rate": 99.71111111111111
+        },
+        {
+            "class": "cat",
+            "l1_mask_norm": 24.835458755493164,
+            "reference_median": 23.390132904052734,
+            "reference_mad": 3.487156143951416,
+            "anomaly_index": 0.4144712171685784,
+            "attack_success_rate": 99.76666666666667
+        },
+        {
+            "class": "deer",
+            "l1_mask_norm": 18.291370391845703,
+            "reference_median": 18.353439331054688,
+            "reference_mad": 2.2873636888504025,
+            "anomaly_index": 0.027135579493342124,
+            "attack_success_rate": 99.78888888888889
+        },
+        {
+            "class": "dog",
+            "l1_mask_norm": 25.353271484375,
+            "reference_median": 22.533071517944336,
+            "reference_mad": 3.112698464012146,
+            "anomaly_index": 0.906030570913553,
+            "attack_success_rate": 99.75555555555556
+        },
+        {
+            "class": "frog",
+            "l1_mask_norm": 18.378408432006836,
+            "reference_median": 21.401238441467285,
+            "reference_mad": 2.980006544494629,
+            "anomaly_index": 1.014370258697899,
+            "attack_success_rate": 99.84444444444445
+        },
+        {
+            "class": "horse",
+            "l1_mask_norm": 16.485347747802734,
+            "reference_median": 19.24905014038086,
+            "reference_mad": 2.285213120269775,
+            "anomaly_index": 1.2093849663579137,
+            "attack_success_rate": 99.91111111111111
+        },
+        {
+            "class": "ship",
+            "l1_mask_norm": 20.906208038330078,
+            "reference_median": 23.47590446472168,
+            "reference_mad": 2.687744132995605,
+            "anomaly_index": 0.956079261729265,
+            "attack_success_rate": 99.66666666666667
+        },
+        {
+            "class": "truck",
+            "l1_mask_norm": 9.095480918884277,
+            "reference_median": 14.372498512268066,
+            "reference_mad": 1.6914773314476013,
+            "anomaly_index": 3.1197684386746163,
+            "attack_success_rate": 99.96666666666667
+        }
+    ],
+    "suspicious_classes": [
+        {
+            "class": "truck",
+            "l1_mask_norm": 9.095480918884277,
+            "reference_median": 14.372498512268066,
+            "reference_mad": 1.6914773314476013,
+            "anomaly_index": 3.1197684386746163,
+            "attack_success_rate": 99.96666666666667
+        }
+    ]
+}

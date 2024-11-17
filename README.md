@@ -25,22 +25,24 @@ This project evaluates neural networks for potential backdoor attacks and helps 
     - In these folders, you will see several subfolders that are explained in [this section](#neural-cleanse-result).
 To perform SODA causality analysis and detect backdoor presence in your model, you can use the following commands. These steps will help you obtain the target class suspects based on the analysis.
 
-5. SODA: To run the causality analysis, use the following command:
+5. For SODA, unzip the downloaded zipped file from https://drive.google.com/file/d/1STFM34q0BGak5HYnK4FuA1bvBxCHePWo/view?usp=sharing.
+
+SODA: To run the causality analysis, use the following command:
 ```bash
 cd semantic-backdoor-soda
 python semantic_mitigation.py --option=causality_analysis --reanalyze=1 --arch=CIFAR10Net --poison_type=semantic --ana_layer 3 --plot=0 --batch_size=64 --num_sample=256 --poison_target=6 --in_model=./save/model2_cifar10_bd.pt --output_dir=./save --t_attack=green --data_set=./data/CIFAR10/cifar_dataset.h5 --data_name=CIFAR10 --num_class=10
 ```
 
-6. SODA: To detect backdoors based on causality analysis, use the following command:
+SODA: To detect backdoors based on causality analysis, use the following command:
 ```bash
 cd semantic-backdoor-soda
 python semantic_mitigation.py --option=detect --reanalyze=1 --arch=CIFAR10Net --poison_type=semantic --confidence=3 --confidence2=0.5 --ana_layer 6 --batch_size=64 --num_sample=256 --poison_target=6 --in_model=./save/model2_cifar10_bd.pt --output_dir=./save --t_attack=green --data_set=./data/CIFAR10/cifar_dataset.h5 --data_name=CIFAR10 --num_class=10
 ```
 
-7. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
+6. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
     - In these folders, you will see several images that are explained in [this section](#grad-cam-result)
 
-8. After obtaining Neural Cleanse results, run `python src/anomaly_detection_by_reference.py` to perform MAD with reference L1 backdoor detection. The results will be organized in the following structure:
+7. After obtaining Neural Cleanse results, run `python src/anomaly_detection_by_reference.py` to perform MAD with reference L1 backdoor detection. The results will be organized in the following structure:
     ```
     output/
     ├── neural_cleanse_experiment_model1/

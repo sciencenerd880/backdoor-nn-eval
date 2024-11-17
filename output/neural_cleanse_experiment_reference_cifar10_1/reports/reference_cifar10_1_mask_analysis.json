@@ -1,0 +1,74 @@
+{
+    "model_name": "reference_cifar10_1",
+    "analysis_timestamp": "2024-11-16 14:12:04.357627",
+    "class_analysis": [
+        {
+            "class": "airplane",
+            "l1_mask_norm": 26.215879440307617,
+            "attack_success_rate": 99.57777777777778,
+            "anomaly_index": 1.2124317209736781
+        },
+        {
+            "class": "automobile",
+            "l1_mask_norm": 19.794713973999023,
+            "attack_success_rate": 99.84444444444445,
+            "anomaly_index": 0.5027145229818889
+        },
+        {
+            "class": "bird",
+            "l1_mask_norm": 22.089406967163086,
+            "attack_success_rate": 99.64444444444445,
+            "anomaly_index": 0.11021689716403653
+        },
+        {
+            "class": "cat",
+            "l1_mask_norm": 21.26414680480957,
+            "attack_success_rate": 99.77777777777777,
+            "anomaly_index": 0.11021689716403653
+        },
+        {
+            "class": "deer",
+            "l1_mask_norm": 15.730001449584961,
+            "attack_success_rate": 99.74444444444444,
+            "anomaly_index": 1.5884327552229525
+        },
+        {
+            "class": "dog",
+            "l1_mask_norm": 15.214702606201172,
+            "attack_success_rate": 99.92222222222222,
+            "anomaly_index": 1.726073325362697
+        },
+        {
+            "class": "frog",
+            "l1_mask_norm": 22.32469367980957,
+            "attack_success_rate": 99.4888888888889,
+            "anomaly_index": 0.17306391824855383
+        },
+        {
+            "class": "horse",
+            "l1_mask_norm": 22.45378875732422,
+            "attack_success_rate": 99.73333333333333,
+            "anomaly_index": 0.20754627795010042
+        },
+        {
+            "class": "ship",
+            "l1_mask_norm": 24.84503173828125,
+            "attack_success_rate": 99.37777777777778,
+            "anomaly_index": 0.8462669959713015
+        },
+        {
+            "class": "truck",
+            "l1_mask_norm": 14.05369758605957,
+            "attack_success_rate": 99.86666666666666,
+            "anomaly_index": 2.036187339704424
+        }
+    ],
+    "suspicious_classes": [
+        {
+            "class": "truck",
+            "l1_mask_norm": 14.05369758605957,
+            "anomaly_index": 2.036187339704424,
+            "asr": 99.86666666666666
+        }
+    ]
+}

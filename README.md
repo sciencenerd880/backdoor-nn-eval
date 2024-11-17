@@ -8,6 +8,7 @@ This project evaluates neural networks for potential backdoor attacks and helps 
 - `models/`: Contains the weights and architectures of the models. Original source from the google drive: https://drive.google.com/file/d/1-fI1KVbgAdRkCSLJxT7MKz-AIT7E3iDV/view
 - `output/`: Contains the output for Neural Cleanse and Grad-CAM
 - `src/`: Core Python scripts for loading, evaluating, and detecting backdoors.
+- `semantic-backdoor-soda/`: A modified module which was originally implemented by (Bing Sun, 2024). Due to the size upload restriction (<100MB per file), the google drive link to unzip can be found here. https://drive.google.com/file/d/1STFM34q0BGak5HYnK4FuA1bvBxCHePWo/view?usp=sharing
 
 ## How to Run
 1. Run `pip install -r requirements.txt` to install required packages.
@@ -22,7 +23,21 @@ This project evaluates neural networks for potential backdoor attacks and helps 
     - If you want to run just Grad-CAM, open `src/grad_cam.py`, pick which CIFAR-10 models to run, and run with `python src/grad_cam.py`. This script by default will run and generate 20 numbers of images per label class. Change this with the constant `NUM_VIZ_PER_CLASS`
 4. Check the output for Neural Cleanse at `output/` folder, in folders called `neural_cleanse_experiment_{time when the script was run}/` (e.g. `neural_cleanse_experiment_20241031_103155/`).
     - In these folders, you will see several subfolders that are explained in [this section](#neural-cleanse-result).
-5. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
+To perform SODA causality analysis and detect backdoor presence in your model, you can use the following commands. These steps will help you obtain the target class suspects based on the analysis.
+
+5. SODA: To run the causality analysis, use the following command:
+```bash
+cd semantic-backdoor-soda
+python semantic_mitigation.py --option=causality_analysis --reanalyze=1 --arch=CIFAR10Net --poison_type=semantic --ana_layer 3 --plot=0 --batch_size=64 --num_sample=256 --poison_target=6 --in_model=./save/model2_cifar10_bd.pt --output_dir=./save --t_attack=green --data_set=./data/CIFAR10/cifar_dataset.h5 --data_name=CIFAR10 --num_class=10
+```
+
+6. SODA: To detect backdoors based on causality analysis, use the following command:
+```bash
+cd semantic-backdoor-soda
+python semantic_mitigation.py --option=detect --reanalyze=1 --arch=CIFAR10Net --poison_type=semantic --confidence=3 --confidence2=0.5 --ana_layer 6 --batch_size=64 --num_sample=256 --poison_target=6 --in_model=./save/model2_cifar10_bd.pt --output_dir=./save --t_attack=green --data_set=./data/CIFAR10/cifar_dataset.h5 --data_name=CIFAR10 --num_class=10
+```
+
+7. Check the output for Grad-CAM at `output/` folder, in folders called `grad_cam_{model name}/` (e.g. `grad_cam_model2/`).
     - In these folders, you will see several images that are explained in [this section](#grad-cam-result)
 
 ## Neural Cleanse Result
@@ -47,6 +62,9 @@ Files:
 1. Grad-CAM can only run for CIFAR-10 models because they are Convolutional Neural Networks (CNN). Grad-CAM relies on the Convolutional layers, which it will then leverages spatial information present in those convolutional layers to create visual explanations.
 2. Because of the timestamp, your neural cleanse results will not get overwritten
 3. Grad-CAM results WILL get overwritten, however, because the folder naming only uses model name.
+
+## References
+Bing Sun, J. S. (2024). Neural Network Semantic Backdoor Detection and Mitigation: A Causality-Based Approach. 33rd USENIX Security Symposium (USENIX Security 24), 2883-2900. Retrieved from https://www.usenix.org/conference/usenixsecurity24/presentation/sun-bing
 
 <!-- ## Requirements
 Given a (third-party trained) neural network, your task is to evaluate whether there are backdoors embedded in the neural network. 
